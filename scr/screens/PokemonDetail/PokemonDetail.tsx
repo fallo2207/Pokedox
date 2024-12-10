@@ -8,15 +8,12 @@ const PokemonDetail = ({route}) => {
 
   const DetailPokemon = pokemonData.find((detail) => detail.id === pokemonId);
   return (
-    <View style={styles.container}>
+    <View style={{backgroundColor: DetailPokemon?.backgroundColor}}>
       <View>
 
         <Image
           source={require('../../images/Pokeball.png')}
           style={styles.pokeball}
-        /><Image
-          source={require('../../images/textBalbasaur.png')}
-          style={styles.textbalbasaur}
         />
        <Image source={DetailPokemon?.image}
         style={styles.styile}
@@ -24,6 +21,8 @@ const PokemonDetail = ({route}) => {
       </View>
       <View style={styles.backgroundWhite}>
            
+           
+
            <View style={styles.Row}>
 
            
@@ -55,7 +54,10 @@ const styles = StyleSheet.create({
   },
 
   styile : {
-    gap :10,
+    
+    width:200,
+    height:200,
+    marginLeft:100,
     
   },
   backgroundWhite: {
