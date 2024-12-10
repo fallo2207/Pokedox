@@ -1,3 +1,13 @@
+# Pokedox
+
+## Pokemon List
+![Screenshot 2024-12-11 000613](https://github.com/user-attachments/assets/78d8b0bb-ae05-4163-8b81-73e143f16f1d)
+
+## Pokemon Detail
+![Screenshot 2024-12-11 000708](https://github.com/user-attachments/assets/cde6d436-ae32-42eb-b833-eb18c2feb804)
+![Screenshot 2024-12-11 000816](https://github.com/user-attachments/assets/3a9cd1e3-eec4-4811-94d1-b15ce34ff689)
+
+
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
 # Getting Started
