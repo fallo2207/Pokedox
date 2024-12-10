@@ -48,6 +48,7 @@ const PokemonList = () => {
                         <PokemonCard
                      image={item.image}
                      name={item.name}
+                     number={item.number}
                     /></TouchableOpacity>
                     
                    

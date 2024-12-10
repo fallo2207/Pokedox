@@ -4,12 +4,13 @@ import { View, Image, Text, StyleSheet, ImageSourcePropType, } from 'react-nativ
 type PokemonProps = {
     name :string,
     image : ImageSourcePropType,
+    number:string,
 }
 
-const PokemonCard = ({image,name}: PokemonProps) => {
+const PokemonCard = ({image,name,number}: PokemonProps) => {
   return (
     <View style={styles.box}>
-    <Text>#007</Text>
+    <Text style={styles.number}>{number}</Text>
     <Image
         source={image} 
         style={styles.images}
@@ -29,7 +30,10 @@ const styles = StyleSheet.create({
         borderColor: '#ccc',
         marginHorizontal: 5,
         elevation: 20,
-        borderRadius: 10,    
+        borderRadius: 10, 
+        margin: 10,
+        marginLeft: 10,
+           
     },
     images: {
         width: 90,
@@ -41,6 +45,10 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         marginBottom: 20,
     },
+
+number:{
+    textAlign: 'left'
+},
 
 });
 
