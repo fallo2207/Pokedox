@@ -11,7 +11,8 @@ const PokemonList = () => {
     const navigation = useNavigation<NativeStackNavigationProp<RootStackParamList>>();
 
     const handleNavigation = (id: number) => {
-        navigation.navigate('PokemonDetail', {pokemonId: id,
+        navigation.navigate('PokemonDetail', {
+            pokemonId: id,
 
         });
     }
@@ -19,47 +20,26 @@ const PokemonList = () => {
     return (
 
         <View style={styles.container}>
-
-
-        
             <Image
                 source={require('../../images/Title.png')}
                 style={styles.logoPokemon} />
-            <View style={styles.row}>
-                <TextInput
-                    style={styles.input}
-                    placeholder="seacrh"
-                />
-                <TouchableOpacity style={styles.button}>
-                    <Image
-                        source={require('../../images//Sort.png')}
-                        style={styles.searchIcon}
-
-                    />
-                </TouchableOpacity>
-
-            </View>
             <View style={styles.backgroundWhite}>
 
                 <View style={styles.row}>
-                  {pokemonData.map((item)=>(
-                    
-                    <TouchableOpacity onPress={()=> handleNavigation(item.id)}>
-                        <PokemonCard
-                     image={item.image}
-                     name={item.name}
-                     number={item.number}
-                    /></TouchableOpacity>
-                    
-                   
-
-                  ))}
+                    {pokemonData.map((item) => (
+                        <TouchableOpacity key={item.id} onPress={() => handleNavigation(item.id)}>
+                            <PokemonCard
+                                image={item.image}
+                                name={item.name}
+                                number={item.number}
+                            /></TouchableOpacity>
+                    ))}
                 </View>
-               
-                
+
+
             </View>
 
-            
+
 
 
         </View>
@@ -121,6 +101,7 @@ const styles = StyleSheet.create({
         height: 32,
         marginLeft: 50,
         marginBottom: 20,
+        marginTop: 20,
 
     },
     images: {
